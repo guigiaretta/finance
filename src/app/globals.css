@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+
+.todapagina {
+  background-color: #1a1a1d;
+  min-height: 100vh; /* ocupa a altura total da tela */
+  width: 100%;
+}
+
+
 header {
   width: auto;
   display: flex;
@@ -43,3 +51,5 @@ align-content: center;
 flex-wrap: nowrap;
 position: absolute;
 border-radius: 0px 0px 0px 0px;*/
+
+

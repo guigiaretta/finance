@@ -1,5 +1,5 @@
 export default function Home(){
   return(
-    <div>Pagina Home</div>
+    <div className="todapagina">Pagina Home</div>
   )
 }
