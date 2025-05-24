@@ -1,12 +1,9 @@
 @import "tailwindcss";
 
-
-.todapagina {
-  background-color: #1a1a1d;
-  min-height: 100vh; /* ocupa a altura total da tela */
-  width: 100%;
+*{
+  margin: 0;
+  padding: 0;
 }
-
 
 header {
   width: auto;
@@ -14,7 +11,8 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #1a1a1d; /* fundo preto/cinza escuro */
-  padding: 12px 500px;
+  width: 68%;
+  margin: 50px auto;
   position: relative;
   align-content: center;
 
@@ -34,22 +32,9 @@ button {
 
 
 body {
-
+  background-color: #1a1a1d;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*flex: 1;
-width: 1px;
-height: min-content;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-overflow: hidden;
-padding: 0px;
-align-content: center;
-flex-wrap: nowrap;
-position: absolute;
-border-radius: 0px 0px 0px 0px;*/
 
 

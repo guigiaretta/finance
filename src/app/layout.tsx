@@ -1,6 +1,7 @@
 
 import "./globals.css";
 import { Header } from '../components/header'
+import { Cards } from "../components/cards";
 
 
 export default function RootLayout({
@@ -13,7 +14,8 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        <Header/>
+        <Header />
+        <Cards />
         {children}
       </body>
     </html>
