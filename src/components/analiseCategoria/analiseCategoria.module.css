@@ -54,8 +54,68 @@
   border-radius: 5px;
   padding: 5px 15px;
   width: 30%;
-  height: 300px;
+  max-height: 300px;
   box-sizing: border-box;
   margin: 60px 0px;
+  overflow-y: auto; /*barra de rolagem*/
+  padding-right: 0px;
 
+}
+
+/* Estilo para a barra de rolagem (WebKit - Chrome, Safari) */
+.categoria::-webkit-scrollbar {
+  width: 0px;
+  background: #09090b;
+}
+
+
+.categoriesList {
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  gap: 20px; /* Espaçamento entre os itens da categoria */
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+  padding: 10px 0px;
+  justify-content: space-between;
+  flex: 1; /* Ocupa um espaço menor */
+  font-size: 0.95em;
+  color: #d1d5da; /* Cor mais suave */
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins", "Poppins Placeholder", sans-serif;
+  color: var(--gray_300, #d1d5db);
+  font-size: 12px;
+  letter-spacing: 0em;
+  line-height: 1.2;
+  font-feature-settings: normal;
+  
+}
+
+.categoryIcon {
+  font-size: 1.1em; /* Tamanho do ícone */
+  flex-shrink: 0; /* Impede que o ícone encolha */
+  width: 0px; /* Largura fixa para o ícone para alinhamento */
+  text-align: center;
+}
+
+.categoryName {
+  flex: 3; /* Permite que o nome ocupe mais espaço */
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Esconde texto que ultrapassa */
+  text-overflow: ellipsis; /* Adiciona "..." */
+}
+
+.categoryCount {
+  flex: 1; /* Ocupa um espaço menor */
+  text-align: center;
+  white-space: nowrap;
+}
+
+.categoryValue {
+  width: 150px;
+  height: auto;
 }
