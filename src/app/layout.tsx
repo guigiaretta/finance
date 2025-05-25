@@ -2,6 +2,8 @@
 import "./globals.css";
 import { Header } from '../components/header'
 import { Cards } from "../components/cards";
+import { AnaliseCategoria } from "../components/analiseCategoria"
+
 
 
 export default function RootLayout({
@@ -16,6 +18,7 @@ export default function RootLayout({
       >
         <Header />
         <Cards />
+        <AnaliseCategoria />
         {children}
       </body>
     </html>

@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 68%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+
+.analise{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #09090b;
+  border-radius: 5px;
+  padding: 5px 15px;
+  width: 68%;
+  height: 300px;
+  box-sizing: border-box;
+  margin: 60px 0px;
+
+}
+
+.analise .titulo{
+    color: #ffffff;
+    background-color: #1A1A1D;
+}
+
+.categoria{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #09090b;
+  border-radius: 5px;
+  padding: 5px 15px;
+  width: 30%;
+  height: 300px;
+  box-sizing: border-box;
+  margin: 60px 0px;
+
+}
