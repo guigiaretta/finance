@@ -1,0 +1,167 @@
+/* components/transacoes.module.css */
+
+/* Container principal da seção de transações */
+.transactionsContainer {
+  background-color: #1A1A1D; /* Fundo escuro */
+  color: #fff; /* Texto claro */
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 68%;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Título "Transações" */
+.transactionsTitle {
+    display: flex;
+    color: var(--gray_300, #d1d5db);
+    background-color: #1A1A1D;
+    margin-top: 5px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    font-feature-settings: normal;
+    justify-content: space-between;
+    margin: 50px 300px 0px 0px;
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+}
+
+
+/* Cabeçalho da "tabela" de transações */
+.transactionsHeader {
+  display: flex;
+  padding: 10px 20px; /* Espaçamento interno */
+  font-weight: bold;
+  color: #aaa; /* Cor do texto do cabeçalho */
+  border-bottom: 1px solid #333; /* Linha divisória */
+  margin-bottom: 15px;
+  gap: 10px; /* Espaçamento entre as colunas do cabeçalho */
+}
+
+/* Estilo para cada item do cabeçalho */
+.headerItem {
+  text-align: left; /* Alinha o texto à esquerda */
+  padding: 0 5px; /* Pequeno padding horizontal */
+  flex: 1 1 auto; 
+}
+
+/* Ajustes de largura para colunas específicas no cabeçalho */
+.headerItem.description { flex: 3 1 200px; } /* Descrição mais larga, com base mínima */
+.headerItem.type { flex: 1 1 80px; } /* Tipo */
+.headerItem.value { flex: 1.2 1 100px; } /* Valor um pouco mais largo */
+.headerItem.bank { flex: 1 1 80px; } /* Banco */
+.headerItem.date { flex: 1.2 1 100px; } /* Data */
+.headerItem.installments { flex: 0.8 1 60px; text-align: right; } /* Parcelas mais estreita e alinhada à direita */
+
+
+/* Estilo para cada item de transação na lista */
+.transactionItem {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+  background-color: #09090b; /* Cor de fundo para cada item */
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  gap: 10px; /* Espaçamento entre os dados do item */
+}
+
+/* Estilo para o ícone da transação */
+.transactionIcon {
+  font-size: 1.5em; /* Tamanho do ícone */
+  margin-right: 5px; /* Reduzido o espaçamento para melhor alinhamento */
+  flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+/* Estilo para os dados de cada item da transação */
+.itemData {
+  text-align: left; /* Alinha o texto à esquerda */
+  padding: 0 5px; /* Pequeno padding horizontal */
+  font-size: 0.95em;
+  color: #f0f0f0;
+  flex: 1 1 auto;
+  white-space: nowrap; /* Impede quebra de linha para manter alinhamento */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa */
+  text-overflow: ellipsis; /* Adiciona "..." se o conteúdo for cortado */
+}
+
+/* Ajustes de largura para colunas específicas nos itens */
+.itemData.description { flex: 3 1 200px; } /* Descrição mais larga, com base mínima */
+.itemData.type { flex: 1 1 80px; } /* Tipo */
+.itemData.value { 
+  flex: 1.2 1 100px; 
+  color: #F44336; /* Cor vermelha para o valor, como na imagem */
+  font-weight: bold;
+} 
+.itemData.bank { flex: 1 1 80px; } /* Banco */
+.itemData.date { flex: 1.2 1 100px; } /* Data */
+.itemData.installments { flex: 0.8 1 60px; text-align: right; } /* Parcelas mais estreita e alinhada à direita */
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .transactionsContainer {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .transactionsTitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .transactionsHeader {
+    display: none; /* Esconde o cabeçalho em telas menores */
+  }
+
+  .transactionItem {
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    padding: 15px;
+    position: relative; /* Para posicionar labels */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    gap: 0; /* Remove gap quando empilhado */
+  }
+
+  .transactionIcon {
+    position: absolute; /* Posiciona o ícone de forma absoluta */
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+  }
+
+  .itemData {
+    width: 100%; /* Ocupa a largura total */
+    padding: 5px 0; /* Ajusta padding */
+    text-align: left; /* Garante alinhamento à esquerda */
+    font-size: 1em;
+    white-space: normal; /* Permite quebra de linha em telas menores */
+    overflow: visible; /* Torna o overflow visível */
+    text-overflow: clip; /* Remove ellipsis */
+  }
+
+  /* Adiciona labels para os dados em telas pequenas */
+  .itemData::before {
+    content: attr(class) ": "; /* Usa o nome da classe como label */
+    font-weight: bold;
+    color: #aaa;
+    display: inline-block;
+    width: 80px; /* Largura fixa para a label */
+    text-transform: capitalize; /* Capitaliza a primeira letra */
+  }
+
+  .itemData.description::before { content: "Descrição: "; }
+  .itemData.type::before { content: "Tipo: "; }
+  .itemData.value::before { content: "Valor: "; }
+  .itemData.bank::before { content: "Banco: "; }
+  .itemData.date::before { content: "Data: "; }
+  .itemData.installments::before { content: "Parcelas: "; }
+
+  /* Ajusta o alinhamento para o valor e parcelas */
+  .itemData.value { text-align: left; }
+  .itemData.installments { text-align: left; }
+}

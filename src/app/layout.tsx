@@ -3,7 +3,7 @@ import "./globals.css";
 import { Header } from '../components/header'
 import { Cards } from "../components/cards";
 import { AnaliseCategoria } from "../components/analiseCategoria"
-
+import { TransactionsList } from "../components/transacoes";
 
 
 export default function RootLayout({
@@ -20,6 +20,8 @@ export default function RootLayout({
         <Header />
         <Cards />
         <AnaliseCategoria />
+        <TransactionsList />
+
         {children}
       </body>
     </html>
