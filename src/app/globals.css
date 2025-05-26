@@ -61,3 +61,15 @@ body {
 .mode{
   background-color: var(--bt-mode-color);
 }
+
+.logo{
+  svg {
+    path {
+      
+      &:hover {
+        stroke: rgb(16, 185, 129) ;
+        fill: rgb(16, 185, 129);
+      }
+    }
+}
+}
