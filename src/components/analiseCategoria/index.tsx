@@ -2,8 +2,24 @@ import React from 'react';
 import styles from "./analiseCategoria.module.css";
 
 
+/*analise*/
 
+const monthlyData = [
+  { month: 'Jan', expense: 850 },
+  { month: 'Fev', expense: 1200 },
+  { month: 'Mar', expense: 700 },
+  { month: 'Abr', expense: 1050 },
+  { month: 'Mai', expense: 920 },
+  { month: 'Jun', expense: 1300 },
+  { month: 'Jul', expense: 600 },
+  { month: 'Ago', expense: 1100 },
+  { month: 'Set', expense: 980 },
+  { month: 'Out', expense: 1450 },
+  { month: 'Nov', expense: 750 },
+  { month: 'Dez', expense: 1500 }, 
+];
 
+const maxExpense = Math.max(...monthlyData.map(data => data.expense));
 
 // categorias
 interface Category {
@@ -37,8 +53,22 @@ export function AnaliseCategoria(){
 
         <div className={styles.bloco}>
                 <div className={styles.analise}>
-                    
-                </div>
+        {/* Título do Gráfico */}
+                    {/* Wrapper das Barras do Gráfico */}
+                    <div className={styles.chartBarsWrapper}>
+                      {monthlyData.map((data, index) => (
+                        <div key={index} className={styles.chartBar}>
+                          {/* Altura da barra baseada no valor do gasto, escalonado por uma altura máxima */}
+                          <div
+                            className={styles.barFill}
+                            style={{ height: `${(data.expense / maxExpense) * 100}%` }} // Altura proporcional
+                          ></div>
+                          <span className={styles.barValue}>R$ {data.expense.toFixed(2).replace('.', ',')}</span>
+                          <span className={styles.barMonth}>{data.month}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
         
 
                 <div className={styles.categoria}>

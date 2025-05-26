@@ -14,21 +14,7 @@
     margin: -50px auto;
 
 }
-.analise{
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--bg-color-container);
-  border-radius: 5px;
-  padding: 5px 15px;
-  width: 68%;
-  height: 300px;
-  box-sizing: border-box;
-  margin: 60px 0px;
-  border: 1px solid var(--border-color)
-
-}
 
 .titulo{
     display: flex;
@@ -125,4 +111,90 @@
 .categoryValue {
   width: 150px;
   height: auto;
+}
+
+
+
+/*analise*/ 
+
+.analise {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Distribui o título e o wrapper das barras */
+  background-color: var(--bg-color-container); /* Usando sua variável CSS */
+  border-radius: 5px;
+  padding: 70px 40px;
+  width: 68%; /* Largura definida pelo seu .analise */
+  height: 300px; /* Altura definida pelo seu .analise */
+  margin: 60px auto; /* Centraliza e adiciona margem superior/inferior */
+  border: 1px solid var(--border-color); /* Usando sua variável CSS */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Mantém a sombra do gráfico original */
+  color: var(--txt-color); /* Garante que o texto dentro do .analise seja branco */
+}
+
+.chartBarsWrapper {
+  display: flex;
+  flex-wrap: nowrap; /* Garante que as barras não quebrem para a próxima linha */
+  justify-content: space-between; /* Distribui as barras uniformemente */
+  height: 200px; /* Altura máxima para o gráfico dentro do .analise */
+  padding-bottom: 0px; /* Espaço entre a base e as labels dos meses */
+  gap: 5px; /* Espaçamento entre as barras */
+
+
+}
+
+.chartBar {
+  display: flex;
+  flex-direction: column; /* Coloca valor, barra e mês um abaixo do outro */
+  align-items: center; /* Centraliza o conteúdo da barra */
+  justify-content: flex-end; /* Empurra o conteúdo para baixo */
+  width: 50px; /* Largura de cada barra */
+  position: relative;
+  flex-shrink: 0; /* Impede que as barras encolham */
+
+
+}
+
+.barFill {
+  background-color: #81e6d9; /* Cor das barras (um tom de verde/ciano) */
+  width: 80%; /* Largura do preenchimento da barra */
+  border-radius: 4px 4px 0 0; /* Bordas arredondadas no topo */
+  transition: height 0.3s ease-out; /* Animação suave para a altura */
+  position: relative; /* Para posicionar o valor dentro ou acima */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha o valor na parte superior da barra */
+
+  &:hover{
+
+    background-color: #22C55E;
+     width: 90%;
+
+  }
+}
+
+.barValue {
+  font-size: 11px;
+  color: var(--txt-color);
+  /* margin-bottom: 5px; Removido para usar top/transform */
+  position: absolute; /* Posição absoluta para o valor */
+  top: -30px; /* Posição inicial acima da barra */
+  white-space: nowrap; /* Evita quebra de linha */
+  opacity: 0; /* ESCONDE o valor por padrão */
+  transition: opacity 0.3s ease-in-out; /* Transição suave para aparecer/desaparecer */
+  pointer-events: none; /* Garante que o texto não interfira com eventos do mouse */
+  transform: translateY(5px); /* Pequeno deslocamento para baixo para a transição */
+}
+
+/* Quando o mouse passar por cima da barra (.chartBar), o valor (.barValue) aparece */
+.chartBar:hover .barValue {
+  opacity: 1; /* MOSTRA o valor */
+  transform: translateY(0); /* Volta para a posição original */
+}
+
+.barMonth {
+  font-size: 12px;
+  color: #aaa; /* Cor do mês */
+  margin-top: 5px; /* Espaçamento abaixo da barra */
+  white-space: nowrap; /* Evita quebra de linha */
 }
