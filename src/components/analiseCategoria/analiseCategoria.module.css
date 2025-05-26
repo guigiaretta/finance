@@ -94,12 +94,8 @@
   font-feature-settings: normal;
 
   &:hover {
-    height: min-content;
     background-color: var(--hvr-color-container);
-    overflow: hidden;
-    flex-wrap: nowrap;
-    gap: 0px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 }
   
@@ -110,6 +106,7 @@
   flex-shrink: 0; /* Impede que o ícone encolha */
   width: 0px; /* Largura fixa para o ícone para alinhamento */
   text-align: center;
+  padding: 0px 5px;
 }
 
 .categoryName {
