@@ -5,12 +5,22 @@
   padding: 0;
 }
 
+:root{
+  --bg-color: #1a1a1d;
+  --bt-mode-color: #fff;
+}
+
+.light{
+  --bg-color: #fff;
+  --bt-mode-color: #1a1a1d;
+}
+
 header {
   width: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1a1a1d; /* fundo preto/cinza escuro */
+  background-color: var(--bg-color);/* fundo preto/cinza escuro */
   width: 68%;
   margin: 15px auto;
   position: relative;
@@ -32,9 +42,12 @@ button {
 
 
 body {
-  background-color: #1a1a1d;
+  background-color: var(--bg-color);;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 
 
+.mode{
+  background-color: var(--bt-mode-color);
+}

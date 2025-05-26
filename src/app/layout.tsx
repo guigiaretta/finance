@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br" class="light">
 
       <body
         className={`antialiased`}
@@ -23,6 +23,8 @@ export default function RootLayout({
         <TransactionsList />
 
         {children}
+
+        <script src="./script.js"></script>
       </body>
     </html>
   );
