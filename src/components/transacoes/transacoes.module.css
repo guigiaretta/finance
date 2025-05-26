@@ -112,7 +112,6 @@
 .itemData.value { 
   flex: 1.2 1 45px; 
   color: #F44336; /* Cor vermelha para o valor, como na imagem */
-  font-weight: bold;
 } 
 .itemData.bank { flex: 1 1 45px; } /* Banco */
 .itemData.date { flex: 1.2 1 45px; } /* Data */

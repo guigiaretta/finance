@@ -5,7 +5,7 @@
   flex-direction: row;
   width: 68%;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 40px auto;
   
 }
 
@@ -35,22 +35,24 @@ font-weight: 400;
 font-style: normal;
 font-family: "Poppins", "Poppins Placeholder", sans-serif;
 color: var(--emerald_500, #10b981);
-font-size: 30px;
+font-size: 24px;
 letter-spacing: 0em;
 line-height: 1.2;
 font-feature-settings: normal;
 }
 
+.container .saida{
+  color: #f43f5e;
+}
+
 
 .container .subtexto {
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Poppins", "Poppins Placeholder", sans-serif;
   color: var(--gray_50, #6b7280);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   line-height: 1.2;
-
-  
   
 }
 
@@ -69,7 +71,10 @@ font-feature-settings: normal;
   height: min-content;
   justify-content: space-between;
   
-  
+}
+
+.container .icon {
+  stroke: #000;
 }
 
 
