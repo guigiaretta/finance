@@ -10,7 +10,7 @@ const monthlyData = [
   { month: 'Mar', expense: 700 },
   { month: 'Abr', expense: 1050 },
   { month: 'Mai', expense: 920 },
-  { month: 'Jun', expense: 1300 },
+  { month: 'Jun', expense: 2000 },
   { month: 'Jul', expense: 600 },
   { month: 'Ago', expense: 1100 },
   { month: 'Set', expense: 980 },
