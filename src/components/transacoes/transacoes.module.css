@@ -2,7 +2,6 @@
 
 /* Container principal da seção de transações */
 .transactionsContainer {
-  background-color: #1A1A1D; /* Fundo escuro */
   color: #fff; /* Texto claro */
   display: flex;
   flex-direction: column;
@@ -17,7 +16,6 @@
 .transactionsTitle {
     display: flex;
     color: var(--gray_300, #d1d5db);
-    background-color: #1A1A1D;
     margin-top: 5px;
     font-size: 18px;
     margin-bottom: 5px;
@@ -37,7 +35,6 @@
   padding: 10px 20px; /* Espaçamento interno */
   font-weight: bold;
   color: #aaa; /* Cor do texto do cabeçalho */
-  border-bottom: 1px solid #333; /* Linha divisória */
   margin-bottom: 15px;
   gap: 10px; /* Espaçamento entre as colunas do cabeçalho */
 }
@@ -62,7 +59,7 @@
 .transactionItem {
   display: flex;
   align-items: center; /* Alinha verticalmente os itens */
-  background-color: #09090b; /* Cor de fundo para cada item */
+  background-color: var(--bg-color-container); /* Cor de fundo para cada item */
   padding: 15px 20px;
   border-radius: 8px;
   margin-bottom: 10px; /* Espaçamento entre os itens */

@@ -8,11 +8,19 @@
 :root{
   --bg-color: #1a1a1d;
   --bt-mode-color: #fff;
+  --bg-color-container: #09090b;
+  --border-color: #46464671;
+  --hvr-color-container: #595959a7;
+  --txt-color: #fff;
 }
 
 .light{
   --bg-color: #fff;
   --bt-mode-color: #1a1a1d;
+  --bg-color-container: #fff;
+  --border-color: #d8d9db36;
+  --hvr-color-container: #5959597b;
+  --txt-color: #000;
 }
 
 header {
@@ -20,7 +28,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-color);/* fundo preto/cinza escuro */
+  background-color: var(--bg-color);
   width: 68%;
   margin: 15px auto;
   position: relative;
