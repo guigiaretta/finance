@@ -52,7 +52,6 @@
   justify-content: space-between;
   background-color: var(--bg-color-container);
   border-radius: 5px;
-  padding: 5px 15px;
   width: 30%;
   max-height: 300px;
   box-sizing: border-box;
@@ -72,13 +71,15 @@
 .categoriesList {
   display: flex;
   flex-direction: column; /* Empilha os itens verticalmente */
-  gap: 20px; /* Espaçamento entre os itens da categoria */
+  gap: 0px; /* Espaçamento entre os itens da categoria */
+
 }
 
 .categoryItem {
+  width: 100%;
   display: flex;
   align-items: center; /* Alinha verticalmente os itens */
-  padding: 10px 0px;
+  padding: 20px 5px;
   justify-content: space-between;
   flex: 1; /* Ocupa um espaço menor */
   font-size: 0.95em;
@@ -91,8 +92,18 @@
   letter-spacing: 0em;
   line-height: 1.2;
   font-feature-settings: normal;
-  
+
+  &:hover {
+    height: min-content;
+    background-color: var(--hvr-color-container);
+    overflow: hidden;
+    flex-wrap: nowrap;
+    gap: 0px;
+    border-radius: 5px;
+  }
 }
+  
+
 
 .categoryIcon {
   font-size: 1.1em; /* Tamanho do ícone */

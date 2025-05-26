@@ -74,7 +74,7 @@ font-feature-settings: normal;
 }
 
 .container .icon {
-  stroke: #000;
+  stroke: var(--txt-color);
 }
 
 
