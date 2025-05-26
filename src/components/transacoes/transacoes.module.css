@@ -2,7 +2,6 @@
 
 /* Container principal da seção de transações */
 .transactionsContainer {
-  color: #fff; /* Texto claro */
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -15,7 +14,7 @@
 /* Título "Transações" */
 .transactionsTitle {
     display: flex;
-    color: var(--gray_300, #d1d5db);
+    color: var(--txt-color);
     margin-top: 5px;
     font-size: 18px;
     margin-bottom: 5px;
@@ -32,11 +31,13 @@
 /* Cabeçalho da "tabela" de transações */
 .transactionsHeader {
   display: flex;
-  padding: 10px 20px; /* Espaçamento interno */
-  font-weight: bold;
-  color: #aaa; /* Cor do texto do cabeçalho */
+  padding: 20px 10px 0px 10px; /* Espaçamento interno */
+  font-weight: 400;
+  color: #858585; /* Cor do texto do cabeçalho */
   margin-bottom: 15px;
   gap: 10px; /* Espaçamento entre as colunas do cabeçalho */
+  font-size: 12px;
+  font-family: "Poppins", "Poppins Placeholder", sans-serif;
 }
 
 /* Estilo para cada item do cabeçalho */
@@ -47,12 +48,25 @@
 }
 
 /* Ajustes de largura para colunas específicas no cabeçalho */
-.headerItem.description { flex: 3 1 200px; } /* Descrição mais larga, com base mínima */
-.headerItem.type { flex: 1 1 80px; } /* Tipo */
+.headerItem.description { flex: 3 1 350px; } /* Descrição mais larga, com base mínima */
+.headerItem.type { flex: 1 1 100px; } /* Tipo */
 .headerItem.value { flex: 1.2 1 100px; } /* Valor um pouco mais largo */
-.headerItem.bank { flex: 1 1 80px; } /* Banco */
-.headerItem.date { flex: 1.2 1 100px; } /* Data */
+.headerItem.bank { flex: 1 1 120px; } /* Banco */
+.headerItem.date { flex: 1.2 1 140px; } /* Data */
 .headerItem.installments { flex: 0.8 1 60px; text-align: right; } /* Parcelas mais estreita e alinhada à direita */
+
+.transactionsList{
+
+  overflow-y: auto; /*barra de rolagem*/
+  max-height: 150px;
+
+}
+
+/* Estilo para a barra de rolagem*/
+.transactionsList::-webkit-scrollbar {
+  width: 0px;
+}
+
 
 
 /* Estilo para cada item de transação na lista */
@@ -60,42 +74,48 @@
   display: flex;
   align-items: center; /* Alinha verticalmente os itens */
   background-color: var(--bg-color-container); /* Cor de fundo para cada item */
-  padding: 15px 20px;
+  padding: 8px;
   border-radius: 8px;
   margin-bottom: 10px; /* Espaçamento entre os itens */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   gap: 10px; /* Espaçamento entre os dados do item */
+  height: 40px;;
 }
 
+/**/
 /* Estilo para o ícone da transação */
 .transactionIcon {
   font-size: 1.5em; /* Tamanho do ícone */
   margin-right: 5px; /* Reduzido o espaçamento para melhor alinhamento */
   flex-shrink: 0; /* Impede que o ícone encolha */
+  
 }
 
 /* Estilo para os dados de cada item da transação */
 .itemData {
   text-align: left; /* Alinha o texto à esquerda */
   padding: 0 5px; /* Pequeno padding horizontal */
-  font-size: 0.95em;
-  color: #f0f0f0;
+  font-size: 12px;
+  color: var(--txt-color);
   flex: 1 1 auto;
   white-space: nowrap; /* Impede quebra de linha para manter alinhamento */
   overflow: hidden; /* Esconde conteúdo que ultrapassa */
   text-overflow: ellipsis; /* Adiciona "..." se o conteúdo for cortado */
+  font-family: "Poppins", "Poppins Placeholder", sans-serif;
+  font-weight: 400;
 }
 
+
 /* Ajustes de largura para colunas específicas nos itens */
-.itemData.description { flex: 3 1 200px; } /* Descrição mais larga, com base mínima */
-.itemData.type { flex: 1 1 80px; } /* Tipo */
+.itemData.description { flex: 3 1 150px; } /* Descrição mais larga, com base mínima */
+.itemData.type { flex: 1 1 45px; } /* Tipo */
 .itemData.value { 
-  flex: 1.2 1 100px; 
+  flex: 1.2 1 45px; 
   color: #F44336; /* Cor vermelha para o valor, como na imagem */
   font-weight: bold;
 } 
-.itemData.bank { flex: 1 1 80px; } /* Banco */
-.itemData.date { flex: 1.2 1 100px; } /* Data */
+.itemData.bank { flex: 1 1 45px; } /* Banco */
+.itemData.date { flex: 1.2 1 45px; } /* Data */
 .itemData.installments { flex: 0.8 1 60px; text-align: right; } /* Parcelas mais estreita e alinhada à direita */
 
 

@@ -62,7 +62,7 @@
   border: 1px solid var(--border-color)
 }
 
-/* Estilo para a barra de rolagem (WebKit - Chrome, Safari) */
+/* Estilo para a barra de rolagem*/
 .categoria::-webkit-scrollbar {
   width: 0px;
   background: #09090b;

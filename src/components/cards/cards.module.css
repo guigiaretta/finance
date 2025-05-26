@@ -62,7 +62,7 @@ font-feature-settings: normal;
   flex-wrap: nowrap;
   font-weight: 400;
   font-family: "Poppins", "Poppins Placeholder", sans-serif;
-  color: var(--txt-card-title);
+  color: var(--txt-color);
   font-size: 15px;
   letter-spacing: 0.15em;
   line-height: 1.2;

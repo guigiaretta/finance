@@ -34,7 +34,31 @@ const transactionsData: Transaction[] = [
     date: '21/03/2024',
     installments: '1/1',
   },
-  // Você pode adicionar mais transações aqui
+
+  {
+    id: '3',
+    description: 'Supermercado Big Master',
+    type: 'Crédito',
+    value: 'R$ 896,00',
+    bank: 'Nubank',
+    date: '21/03/2024',
+    installments: '1/1',
+  },
+
+  {
+    id: '4',
+    description: 'Supermercado Big Master',
+    type: 'Crédito',
+    value: 'R$ 896,00',
+    bank: 'Nubank',
+    date: '21/03/2024',
+    installments: '1/1',
+  },
+
+
+
+
+
 ];
 
 // Componente principal para a lista de transações
