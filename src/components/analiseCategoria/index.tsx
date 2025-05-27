@@ -2,8 +2,8 @@ import React from 'react';
 import styles from "./analiseCategoria.module.css";
 
 
-/*analise*/
 
+//dados do gráfico
 const monthlyData = [
   { month: 'Jan', expense: 850 },
   { month: 'Fev', expense: 1200 },
@@ -27,7 +27,7 @@ interface Category {
   name: string;
   count: number;
   value: string;
-  icon: string; // Para o emoji do ícone
+  icon: string; 
 }
 
 const categoriesData: Category[] = [

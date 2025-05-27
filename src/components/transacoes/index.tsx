@@ -1,9 +1,8 @@
-// components/TransactionsList.tsx
+
 import React from 'react';
-// Importa os estilos como um módulo CSS
 import styles from './transacoes.module.css'; 
 
-// Interface para definir a estrutura de uma transação
+
 interface Transaction {
   id: string;
   description: string;
@@ -14,7 +13,6 @@ interface Transaction {
   installments: string;
 }
 
-// Dados de exemplo para as transações
 const transactionsData: Transaction[] = [
   {
     id: '1',
@@ -61,10 +59,10 @@ const transactionsData: Transaction[] = [
 
 ];
 
-// Componente principal para a lista de transações
+
 export function TransactionsList() {
   return (
-    // Usa as classes do módulo CSS
+
     <div className={styles.transactionsContainer}>
 
 
@@ -86,7 +84,6 @@ export function TransactionsList() {
       <div className={styles.transactionsList}>
         {transactionsData.map((transaction) => (
           <div key={transaction.id} className={styles.transactionItem}>
-            {/* Ícone de carrinho de compras (placeholder sem biblioteca externa) */}
             <span className={styles.transactionIcon}>🛒</span> 
             <span className={`${styles.itemData} ${styles.description}`}>{transaction.description}</span>
             <span className={`${styles.itemData} ${styles.type}`}>{transaction.type}</span>

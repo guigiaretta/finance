@@ -1,6 +1,4 @@
-/* components/transacoes.module.css */
-
-/* Container principal da seção de transações */
+/* Container principal */
 .transactionsContainer {
   display: flex;
   flex-direction: column;
@@ -26,7 +24,6 @@
     margin: 50px 300px 0px 0px;
     font-family: "Poppins", "Poppins Placeholder", sans-serif;
 }
-
 
 /* Cabeçalho da "tabela" de transações */
 .transactionsHeader {
@@ -55,19 +52,18 @@
 .headerItem.date { flex: 1.2 1 140px; } /* Data */
 .headerItem.installments { flex: 0.8 1 60px; text-align: right; } /* Parcelas mais estreita e alinhada à direita */
 
+
+/*lista de transações*/
 .transactionsList{
 
   overflow-y: auto; /*barra de rolagem*/
   max-height: 150px;
 
 }
-
 /* Estilo para a barra de rolagem*/
 .transactionsList::-webkit-scrollbar {
   width: 0px;
 }
-
-
 
 /* Estilo para cada item de transação na lista */
 .transactionItem {
@@ -111,73 +107,9 @@
 .itemData.type { flex: 1 1 45px; } /* Tipo */
 .itemData.value { 
   flex: 1.2 1 45px; 
-  color: #F44336; /* Cor vermelha para o valor, como na imagem */
+  color: #F44336; /* Cor do valor*/
 } 
 .itemData.bank { flex: 1 1 45px; } /* Banco */
 .itemData.date { flex: 1.2 1 45px; } /* Data */
 .itemData.installments { flex: 0.8 1 60px; text-align: right; } /* Parcelas mais estreita e alinhada à direita */
 
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .transactionsContainer {
-    padding: 15px;
-    margin: 20px 10px;
-  }
-
-  .transactionsTitle {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-
-  .transactionsHeader {
-    display: none; /* Esconde o cabeçalho em telas menores */
-  }
-
-  .transactionItem {
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    padding: 15px;
-    position: relative; /* Para posicionar labels */
-    flex-direction: column; /* Empilha os itens verticalmente */
-    align-items: flex-start; /* Alinha o conteúdo à esquerda */
-    gap: 0; /* Remove gap quando empilhado */
-  }
-
-  .transactionIcon {
-    position: absolute; /* Posiciona o ícone de forma absoluta */
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-  }
-
-  .itemData {
-    width: 100%; /* Ocupa a largura total */
-    padding: 5px 0; /* Ajusta padding */
-    text-align: left; /* Garante alinhamento à esquerda */
-    font-size: 1em;
-    white-space: normal; /* Permite quebra de linha em telas menores */
-    overflow: visible; /* Torna o overflow visível */
-    text-overflow: clip; /* Remove ellipsis */
-  }
-
-  /* Adiciona labels para os dados em telas pequenas */
-  .itemData::before {
-    content: attr(class) ": "; /* Usa o nome da classe como label */
-    font-weight: bold;
-    color: #aaa;
-    display: inline-block;
-    width: 80px; /* Largura fixa para a label */
-    text-transform: capitalize; /* Capitaliza a primeira letra */
-  }
-
-  .itemData.description::before { content: "Descrição: "; }
-  .itemData.type::before { content: "Tipo: "; }
-  .itemData.value::before { content: "Valor: "; }
-  .itemData.bank::before { content: "Banco: "; }
-  .itemData.date::before { content: "Data: "; }
-  .itemData.installments::before { content: "Parcelas: "; }
-
-  /* Ajusta o alinhamento para o valor e parcelas */
-  .itemData.value { text-align: left; }
-  .itemData.installments { text-align: left; }
-}
